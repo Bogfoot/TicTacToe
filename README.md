@@ -2,7 +2,7 @@ One of my 1st ever programs I made when I was 11 or 12. Found this on my PC yest
 
 
 ***How to build***
-1. git clone 
+1. git clone https://github.com/Bogfoot/TicTacToe.git
 2. mkdir build && cd build
 3. cmake ..
 4. cmake --build .
