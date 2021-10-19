@@ -1,6 +1,6 @@
 #include <iostream>
 #include <random>
-#include <time.h>
+#include <chrono>
 #pragma once
 
 void AI(char ploca[3][3]);
