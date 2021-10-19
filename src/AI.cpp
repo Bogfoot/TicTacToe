@@ -1,6 +1,7 @@
 #include "../inc/AI.h"
+
 void clearScreen() {
-	printf("\033c");
+	std::cout <<("\033c");
 }
 
 void showBoard(char ploca[3][3]) {
@@ -58,7 +59,8 @@ void AI(char ploca[3][3])
 	int x = rng() , y = rng();
 	if (ploca[x][y] == 'x')
 		AI(ploca);
-
+	else if (ploca[x][y] == 'o')
+		AI(ploca);
 	else
 		ploca[x][y] = 'o';
 }

@@ -6,8 +6,6 @@
 //Zelim da nasumicno bira misto di ce komp stavit kruzic,
 //da ocisti ekran kad korisnik unese izbor (broj ili par brojeva)
 
-
-
 int main()
 {
 	char ploca[3][3]{ {""}, {""}, {""} };
@@ -21,7 +19,7 @@ int main()
 		{
 			std::cout << "Matrix is 3x3, use 0, 1, 2 for input please." << std::endl;
 			std::cin >> x >> y;
-			
+
 		}
 
 		while ((ploca[x][y] == 'o') || (ploca[x][y] == 'x'))
@@ -30,6 +28,11 @@ int main()
 			std::cin >> x >> y;
 		}
 		ploca[x][y] = 'x';
+		if (hasWon(ploca)) {
+			clearScreen();
+			showBoard(ploca);
+			break;
+		}
 		AI(ploca);
 		clearScreen();
 		showBoard(ploca);

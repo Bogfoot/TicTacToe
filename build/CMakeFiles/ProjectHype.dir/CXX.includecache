@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/h/dev/ProjectHype/inc/AI.h
+iostream
+-
+random
+-
+time.h
+-
+
+/mnt/h/dev/ProjectHype/src/AI.cpp
+../inc/AI.h
+/mnt/h/dev/ProjectHype/inc/AI.h
+
+/mnt/h/dev/ProjectHype/src/TicTacToe.cpp
+../inc/AI.h
+/mnt/h/dev/ProjectHype/inc/AI.h
+

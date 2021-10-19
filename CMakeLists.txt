@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("ProjectHype")
+project ("ProjectHype" VERSION 0.1 LANGUAGES C CXX)
 set(SOURCES src/TicTacToe.cpp src/AI.cpp inc/AI.h)
 # Add source to this project's executable.
 add_executable (${PROJECT_NAME} ${SOURCES})

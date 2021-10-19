@@ -1,0 +1,3 @@
+/mnt/h/dev/ProjectHype/build/CMakeFiles/rebuild_cache.dir
+/mnt/h/dev/ProjectHype/build/CMakeFiles/edit_cache.dir
+/mnt/h/dev/ProjectHype/build/CMakeFiles/ProjectHype.dir
