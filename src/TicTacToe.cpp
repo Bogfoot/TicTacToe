@@ -52,6 +52,6 @@ int main()
 		std::cout << "Want to play again?" << std::endl;
 		std::cin >> playagain;
 		clearScreen();
-		clearBoard(ploca);
+		clearBoard(ploca); //Reset the board state
 	} while (playagain == 'y');
 }
