@@ -5,11 +5,15 @@
 
 int main()
 {
-	char ploca[3][3]{ {""}, {""}, {""} };
+	char ploca[3][3]{ {""}, {""}, {""}};
+
+	std::cout << "How to play:\nEnter a number between 0-2 (including 0 and 2), hit enter. Do that again.\nHave fun with this crappy Tic Tac Toe game." << std::endl;
 
 	int x, y;
-	char playagain;
-	do {
+	char playagain = 'y';
+
+	while (playagain == 'y')
+	{
 		do
 		{
 			std::cout << "Where to place an 'x'? (in matrix form, 3x3 matrix)" << std::endl;
@@ -27,7 +31,7 @@ int main()
 				std::cin >> x >> y;
 			}
 			ploca[x][y] = 'x';
-			if (hasWon(ploca)) //Upon victory, clear screen, show board state and exit loop
+			if (whoWon(ploca, 'x')) //Upon victory, clear screen, show board state and exit loop
 			{
 				clearScreen();
 				showBoard(ploca);
@@ -35,23 +39,23 @@ int main()
 			}
 
 			AI(ploca); //"AI" moves
-			if (AIWon(ploca)) {
-				clearScreen();
-				showBoard(ploca);
-				break;
-			}
+
 			clearScreen();
 			showBoard(ploca); //Show board state
 
-		} while (!hasWon(ploca));
+		} while (!whoWon(ploca, 'x') || !whoWon(ploca, 'o'));
 
-		if (hasWon(ploca))
+		if (whoWon(ploca, 'x'))
+		{
 			std::cout << "You won!" << std::endl;
+		}
 		else
+		{
 			std::cout << "You lost to the random picker AI, good job!" << std::endl;
+		}
 		std::cout << "Want to play again?" << std::endl;
 		std::cin >> playagain;
 		clearScreen();
 		clearBoard(ploca); //Reset the board state
-	} while (playagain == 'y');
+	}
 }
